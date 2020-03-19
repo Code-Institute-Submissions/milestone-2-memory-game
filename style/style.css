@@ -20,6 +20,7 @@ body {
     margin: auto;
     display: flex;
     flex-wrap: wrap;
+    perspective: 1000px;
 }
 
 /* Card Space Styling */
@@ -30,6 +31,14 @@ body {
     margin: 5px;
     position: relative;
     box-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .5s;
+}
+
+.card:active {
+    transform: scale(0.95);
+    transition: transform .3s;
 }
 
 .front, .back {
@@ -39,4 +48,10 @@ body {
     position: absolute;
     border-radius: 5px;
     background: #1c7ccc;
+}
+
+/* Animation */
+
+.card.flip {
+    transform: rotateY(180deg);
 }
