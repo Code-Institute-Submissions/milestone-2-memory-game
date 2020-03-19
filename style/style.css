@@ -1,0 +1,42 @@
+/* All Styles */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}i
+
+/* Main Board Styling */
+
+body {
+    height: 100vh;
+    display: flex;
+    background: #bada55;
+}
+
+.gameboard {
+    width: 640px;
+    height: 640px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Card Space Styling */
+
+.card {
+    width: calc(25% - 10px);
+    height: calc(33.333$ - 10px);
+    margin: 5px;
+    position: relative;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+}
+
+.front, .back {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    position: absolute;
+    border-radius: 5px;
+    background: #1c7ccc;
+}
