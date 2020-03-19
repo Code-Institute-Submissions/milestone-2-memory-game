@@ -48,10 +48,15 @@ body {
     position: absolute;
     border-radius: 5px;
     background: #1c7ccc;
+    backface-visibility: hidden;
 }
 
 /* Animation */
 
-.card.flip {
+.card.turn {
+    transform: rotateY(180deg);
+}
+
+.front {
     transform: rotateY(180deg);
 }
