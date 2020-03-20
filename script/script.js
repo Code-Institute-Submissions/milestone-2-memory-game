@@ -1,10 +1,15 @@
 const cards = document.querySelectorAll(".card");
 
 let hasTurnedCard = false;
+let boardLock = false;
 let cardOne, cardTwo;
 
 const turnCard = e => {
+    if (boardLock) return;
+
     const target = e.target.parentElement;
+
+    if (target === cardOne) return;
 
     target.classList.add("turn");
 
@@ -30,17 +35,17 @@ const checkForBingo = () => {
         cardOne.removeEventListener("click", turnCard);
         cardTwo.removeEventListener("click", turnCard);
     } else {
+        boardLock = true;
+
         setTimeout(() => {
             cardOne.classList.remove("turn");
             cardTwo.classList.remove("turn");
+
+        boardLock = false;
         }, 1000);
     }
 };
 
-/* Function for turning Cards */
-
-//function turnCard() {
-   
 
 /* Randomising the card Pairs */
 
