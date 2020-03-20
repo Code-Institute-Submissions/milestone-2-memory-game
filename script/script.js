@@ -30,8 +30,10 @@ const checkForBingo = () => {
         cardOne.removeEventListener("click", turnCard);
         cardTwo.removeEventListener("click", turnCard);
     } else {
-        cardOne.classList.remove("turn");
-        cardTwo.classList.remove("turn");
+        setTimeout(() => {
+            cardOne.classList.remove("turn");
+            cardTwo.classList.remove("turn");
+        }, 1000);
     }
 };
 
