@@ -1,56 +1,44 @@
 const cards = document.querySelectorAll(".card");
 
 let hasTurnedCard = false;
-let secureBoard = false;
 let cardOne, cardTwo;
+
+const turnCard = e => {
+    const target = e.target.parentElement;
+
+    target.classList.add("turn");
+
+    if (!hasTurnedCard) {
+        // First Click
+
+        hasTurnedCard = true;
+        cardOne = target;
+    } else {
+        // Second click
+
+        hasTurnedCard = false;
+        cardTwo = target;
+
+        checkForBingo();
+    }
+};
+
+// Check for same cards
+
+const checkForBingo = () => {
+    if (cardOne.dataset.framework === cardTwo.dataset.framework) {
+        cardOne.removeEventListener("click", turnCard);
+        cardTwo.removeEventListener("click", turnCard);
+    } else {
+        cardOne.classList.remove("turn");
+        cardTwo.classList.remove("turn");
+    }
+};
 
 /* Function for turning Cards */
 
-function turnCard() {
-    if (secureBoard) return;
-    if (this === cardOne) return;
-
-    this.classList.add("turn");
-
-    if (!hasTurnedCard) {
-        hasTurnedCard = true;
-        cardOne = this;
-
-        return;
-    }
-
-    cardTwo = this;
-    checkForBingo();
-}
-/* Checking for a Match (Needs fixing) */
-
-function checkForBingo() {
-    let isCorrect = cardOne.dataset.framework === cardTwo.dataset.framework;
-    isCorrect ? unableCards() : unturnCards();
-}
-
-function unableCards() {
-    cardOne.removeEventListener("click", turnCard);
-    cardTwo.removeEventListener("click", turnCard);
-
-    restartBoard();
-}
-
-function reverseCards() {
-    secureBoard = true;
-
-    setTimeout(() => {
-        cardOne.classList.remove("turn");
-        cardTwo.classList.remove("turn");
-
-    restartBoard();
-    }, 1500);
-}
-
-function restartBoard() {
-    hasTurnedCard = secureBoard = false;
-    cardOne = cardTwo = null;
-}
+//function turnCard() {
+   
 
 /* Randomising the card Pairs */
 

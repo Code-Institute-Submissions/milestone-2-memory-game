@@ -15,11 +15,11 @@
 }
 
 .gameboard {
-    width: 640px;
-    height: 640px;
+    width: 650px;
+    height: 650px;
     margin: auto;
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     perspective: 1000px;
 }
 
