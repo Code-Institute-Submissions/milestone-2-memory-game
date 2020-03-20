@@ -15,18 +15,17 @@ function turnCard() {
     if (!hasTurnedCard) {
         hasTurnedCard = true;
         cardOne = this;
+
         return;
     }
 
     cardTwo = this;
-    secureBoard = true;
-
     checkForBingo();
 }
 /* Checking for a Match (Needs fixing) */
 
 function checkForBingo() {
-    let isCorrect = cardOne.dataset.name === cardTwo.dataset.name;
+    let isCorrect = cardOne.dataset.framework === cardTwo.dataset.framework;
     isCorrect ? unableCards() : unturnCards();
 }
 
@@ -38,6 +37,8 @@ function unableCards() {
 }
 
 function reverseCards() {
+    secureBoard = true;
+
     setTimeout(() => {
         cardOne.classList.remove("turn");
         cardTwo.classList.remove("turn");
@@ -47,15 +48,15 @@ function reverseCards() {
 }
 
 function restartBoard() {
-    [hasTurnedCard, secureBoard] = [false, false];
-    [cardOne, cardTwo] = [null, null];
+    hasTurnedCard = secureBoard = false;
+    cardOne = cardTwo = null;
 }
 
 /* Randomising the card Pairs */
 
 (function randomise() {
     cards.forEach(card => {
-        let secretLocation = Math.floor(Math.random() * 12);
+        const secretLocation = Math.floor(Math.random() * cards.length);
         card.style.order = secretLocation;
     });
 })();

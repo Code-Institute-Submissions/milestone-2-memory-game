@@ -1,17 +1,17 @@
 /* All Styles */
 
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
-}i
+}
 
 /* Main Board Styling */
 
-body {
+.wrapper {
     height: 100vh;
     display: flex;
-    background: #bada55;
+    background: #D7C49EFF;
 }
 
 .gameboard {
@@ -41,13 +41,15 @@ body {
     transition: transform .3s;
 }
 
+/* Card Styling */
+
 .front, .back {
     width: 100%;
     height: 100%;
     padding: 20px;
     position: absolute;
     border-radius: 5px;
-    background: #616616;
+    background: #343148FF;
     backface-visibility: hidden;
 }
 
