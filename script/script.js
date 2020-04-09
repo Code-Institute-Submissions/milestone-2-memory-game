@@ -31,13 +31,7 @@ const turnCard = e => {
 // Check for same cards
 
 const checkForBingo = () => {
-    const isEqual = cardOne.dataset.framework === cardTwo.dataset.framework
-
-    //if (cardOne.dataset.framework === cardTwo.dataset.framework) {
-    //    disableCards();
-    //} else {
-    //    unturnCards();
-    //}
+    const isEqual = cardOne.dataset.framework === cardTwo.dataset.framework;
 
     isEqual ? disableCards() : unturnCards();
 };
@@ -55,9 +49,20 @@ const unturnCards = () => {
             cardOne.classList.remove("turn");
             cardTwo.classList.remove("turn");
 
-        boardLock = false;
+        restartBoard();
         }, 1000);
 };
+
+const restartBoard = () => {
+    // spread operator (left here for version control)
+    //[hasTurnedCard, boardLock] = [false, false];
+    //[cardOne, cardTwo] = [null, null];
+
+
+    // Good version, double insertation
+    hasTurnedCard = boardLock = false;
+    cardOne = cardTwo = null;
+}
 
 /* Randomising the card Pairs */
 
