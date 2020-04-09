@@ -4,73 +4,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/style.css">
     <title>Test your Memory</title>
 </head>
 <body>
-    <div class="wrapper">
-        <section class="gameboard">
-            <div class="card" data-framework="gagarin">
-                <img class="front" src="assets/img/GAGARIN.jpg" alt="Gagarin">
-                <img class="back" src="assets/img/BACK.jpg" alt="Back Card">
-            </div>
-
-            <div class="card" data-framework="gagarin">
-                <img class="front" src="assets/img/GAGARIN.jpg" alt="Gagarin">
-                <img class="back" src="assets/img/BACK.jpg" alt="Back Card">
-            </div>
-
-            <div class="card" data-framework="bread">
-                <img class="front" src="assets/img/HLEB.jpg" alt="Bread">
-                <img class="back" src="assets/img/BACK.jpg" alt="Back Card">
-            </div>
-
-            <div class="card" data-framework="bread">
-                <img class="front" src="assets/img/HLEB.jpg" alt="Bread">
-                <img class="back" src="assets/img/BACK.jpg" alt="Back Card">
-            </div>
-
-            <div class="card" data-framework="quality">
-                <img class="front" src="assets/img/KACHESTVO.jpg" alt="Quality">
-                <img class="back" src="assets/img/BACK.jpg" alt="Back Card">
-            </div>
-
-            <div class="card" data-framework="quality">
-                <img class="front" src="assets/img/KACHESTVO.jpg" alt="Quality">
-                <img class="back" src="assets/img/BACK.jpg" alt="Back Card">
-            </div>
-
-            <div class="card" data-framework="shepherd">
-                <img class="front" src="assets/img/OVCEVOD.jpg" alt="Shepherd">
-                <img class="back" src="assets/img/BACK.jpg" alt="Back Card">
-            </div>
-
-            <div class="card" data-framework="shepherd">
-                <img class="front" src="assets/img/OVCEVOD.jpg" alt="Shepherd">
-                <img class="back" src="assets/img/BACK.jpg" alt="Back Card">
-            </div>
-
-            <div class="card" data-framework="work">
-                <img class="front" src="assets/img/RABOTA.jpg" alt="Work">
-                <img class="back" src="assets/img/BACK.jpg" alt="Back Card">
-            </div>
-            
-            <div class="card" data-framework="work">
-                <img class="front" src="assets/img/RABOTA.jpg" alt="Work">
-                <img class="back" src="assets/img/BACK.jpg" alt="Back Card">
-            </div>
-
-            <div class="card" data-framework="money">
-                <img class="front" src="assets/img/RUBL.jpg" alt="Money">
-                <img class="back" src="assets/img/BACK.jpg" alt="Back Card">
-            </div>
-
-            <div class="card" data-framework="money">
-                <img class="front" src="assets/img/RUBL.jpg" alt="Money">
-                <img class="back" src="assets/img/BACK.jpg" alt="Back Card">
-            </div>
+    <h1>Test your Memory</h1>
+        <section class="score">
+            <span class="left-side">
+                <span class="moves">0</span> moves
+                <span class="timer"></span>
+            </span>
+            <span class="right-side">
+                <span class="restart">
+                    <i class="fas fa-undo"></i>
+                </span>
+            </span>
         </section>
-    </div>
+            <div class="wrapper">
+                <section class="gameboard">
+                    <div class="card" data-framework="gagarin">
+                        <img class="front" src="assets/img/GAGARIN.jpg" alt="Gagarin">
+                        <img class="back" src="assets/img/BACK.jpg" alt="Back Card">
+                    </div>
+
+                    <div class="card" data-framework="gagarin">
+                        <img class="front" src="assets/img/GAGARIN.jpg" alt="Gagarin">
+                        <img class="back" src="assets/img/BACK.jpg" alt="Back Card">
+                    </div>
+
+                    <div class="card" data-framework="bread">
+                        <img class="front" src="assets/img/HLEB.jpg" alt="Bread">
+                        <img class="back" src="assets/img/BACK.jpg" alt="Back Card">
+                    </div>
+
+                    <div class="card" data-framework="bread">
+                        <img class="front" src="assets/img/HLEB.jpg" alt="Bread">
+                        <img class="back" src="assets/img/BACK.jpg" alt="Back Card">
+                    </div>
+
+                    <div class="card" data-framework="quality">
+                        <img class="front" src="assets/img/KACHESTVO.jpg" alt="Quality">
+                        <img class="back" src="assets/img/BACK.jpg" alt="Back Card">
+                    </div>
+
+                    <div class="card" data-framework="quality">
+                        <img class="front" src="assets/img/KACHESTVO.jpg" alt="Quality">
+                        <img class="back" src="assets/img/BACK.jpg" alt="Back Card">
+                    </div>
+
+                    <div class="card" data-framework="shepherd">
+                        <img class="front" src="assets/img/OVCEVOD.jpg" alt="Shepherd">
+                        <img class="back" src="assets/img/BACK.jpg" alt="Back Card">
+                    </div>
+
+                    <div class="card" data-framework="shepherd">
+                        <img class="front" src="assets/img/OVCEVOD.jpg" alt="Shepherd">
+                        <img class="back" src="assets/img/BACK.jpg" alt="Back Card">
+                    </div>
+
+                    <div class="card" data-framework="work">
+                        <img class="front" src="assets/img/RABOTA.jpg" alt="Work">
+                        <img class="back" src="assets/img/BACK.jpg" alt="Back Card">
+                    </div>
+                    
+                    <div class="card" data-framework="work">
+                        <img class="front" src="assets/img/RABOTA.jpg" alt="Work">
+                        <img class="back" src="assets/img/BACK.jpg" alt="Back Card">
+                    </div>
+
+                    <div class="card" data-framework="money">
+                        <img class="front" src="assets/img/RUBL.jpg" alt="Money">
+                        <img class="back" src="assets/img/BACK.jpg" alt="Back Card">
+                    </div>
+
+                    <div class="card" data-framework="money">
+                        <img class="front" src="assets/img/RUBL.jpg" alt="Money">
+                        <img class="back" src="assets/img/BACK.jpg" alt="Back Card">
+                    </div>
+                </section>
+            </div>
     <script src="script/script.js"></script>
 </body>
 </html>
