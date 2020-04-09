@@ -31,11 +31,15 @@ const turnCard = e => {
 // Check for same cards
 
 const checkForBingo = () => {
-    if (cardOne.dataset.framework === cardTwo.dataset.framework) {
-        disableCards();
-    } else {
-        unturnCards();
-    }
+    const isEqual = cardOne.dataset.framework === cardTwo.dataset.framework
+
+    //if (cardOne.dataset.framework === cardTwo.dataset.framework) {
+    //    disableCards();
+    //} else {
+    //    unturnCards();
+    //}
+
+    isEqual ? disableCards() : unturnCards();
 };
 
 
