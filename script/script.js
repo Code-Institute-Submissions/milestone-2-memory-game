@@ -32,10 +32,20 @@ const turnCard = e => {
 
 const checkForBingo = () => {
     if (cardOne.dataset.framework === cardTwo.dataset.framework) {
-        cardOne.removeEventListener("click", turnCard);
-        cardTwo.removeEventListener("click", turnCard);
+        disableCards();
     } else {
-        boardLock = true;
+        unturnCards();
+    }
+};
+
+
+const disableCards = () => {
+    cardOne.removeEventListener("click", turnCard);
+    cardTwo.removeEventListener("click", turnCard);
+};
+
+const unturnCards = () => {
+    boardLock = true;
 
         setTimeout(() => {
             cardOne.classList.remove("turn");
@@ -43,9 +53,7 @@ const checkForBingo = () => {
 
         boardLock = false;
         }, 1000);
-    }
 };
-
 
 /* Randomising the card Pairs */
 
