@@ -11,15 +11,15 @@
 h1 {
     font-family: 'Julius Sans One', sans-serif;
     text-align: center;
-    padding-top: 35px;
+    padding-top: 1%;
     color: #343148FF;
     background-color: #D7C49EFF;
 }
 
-/* Score Board Styling*/
+/* Score Board Styling */
 
 .score {
-    padding-top: 3%;
+    padding-top: 2%;
     width: 100%;
     text-align: center;
     font-family: 'Julius Sans One', sans-serif;
@@ -27,13 +27,24 @@ h1 {
 }
 
 .left-side {
-    padding-right: 1%;
+    padding-right: 2%;
     background-color: #D7C49EFF;
 }
 
 .right-side {
-    padding-left: 1%;
+    padding-left: 2%;
     background-color: #D7C49EFF;
+}
+
+.timer {
+    
+}
+
+/* Restart Button */
+
+.restart {
+    cursor: pointer;
+    color: #00BC0B;
 }
 
 /* Main Board Styling */

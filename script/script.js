@@ -3,6 +3,11 @@ const cards = document.querySelectorAll(".card");
 let hasTurnedCard = false;
 let boardLock = false;
 let cardOne, cardTwo;
+let moves = 0;
+let counter = document.querySelector(".moves");
+let second = 0, minute = 0, hour = 0;
+let timer = document.querySelector(".timer");
+const restartButton = document.querySelector(".restart");
 
 const turnCard = e => {
     if (boardLock) return;
@@ -63,6 +68,10 @@ const restartBoard = () => {
     hasTurnedCard = boardLock = false;
     cardOne = cardTwo = null;
 }
+
+/* Reset Button */
+
+restartButton.addEventListener("click", startGame);
 
 /* Randomising the card Pairs */
 
