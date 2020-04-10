@@ -177,7 +177,9 @@ User Interface testing is performed to verify that site’s graphical user inter
 
 •	Testing with different screen resolutions – <span style="color:green">Passed</span>
 
-•	Testing the graphical user interface on target devices: smartphones – <span style="color:red">Failed</span> – Landscape view of Iphone XS, Pixel 2, IPhone 6-7 is not responding correctly, this will be fixed and documented appropriately (Testing made using http://www.responsinator.com/)
+•	Testing the graphical user interface on target devices: smartphones – <span style="color:red">Failed</span> – Portrait view of Iphone XS, Pixel 2, IPhone 6-7 is not responding correctly, this will be fixed and documented appropriately (Testing made using http://www.responsinator.com/)
+
+•	Testing the graphical user interface on target devices: smartphones Landscape view – <span style="color:red">Failed</span> – Landscape view of Iphone XS, Pixel 2, IPhone 6-7 is not responding correctly - the cards show up as intended, but the current weather forecast is put behind the Game Board and is not visible. This will be fixed and documented appropriately (Testing made using http://www.responsinator.com/)
 
 •	Testing the graphical user interface on target devices: tablets – <span style="color:green">Passed</span>
 
@@ -192,9 +194,9 @@ Cross-platform testing of the site allows to evaluate the performance of the sit
 
 •	Mac OS - <span style="color:green">Passed</span>
 
-•	iOS – <span style="color:green">Passed</span>
+•	iOS – <span style="color:red">Failed</span> - does not respond in Google Chrome when using iPhone iOS
 
-•	Android – <span style="color:red">Failed</span> – Issue with graphical user interface stated above, text merging.
+•	Android – <span style="color:green">Passed</span> – The game is functional with minor issues
 
 
 Cross-browser testing of the site helps to verify the correct operation of the site in different browser configurations:
@@ -218,51 +220,51 @@ Number of failed tests: <span style="color:red">3</span>
 
 Fixes shall be implemented and documented accordingly for the identified issues.
 
-1.	Email validity of input fix – 
+1.	Graphical user interface on target devices: smartphones –
 
-2.	Graphical user interface on target devices: smartphones –
+2.	Viewport sizing issues -
 
 3.	Android merging of text issue - 
 
 
-In conclusion, the website is of sound structure and is ready to be deployed.
+In conclusion, the application is of sound structure and is ready to be deployed.
 
 # Deployment
 
-Vladimirs Boreckis Personal Profile website code is located on GitHub. The repository for this site can be found at VladimirB3/portfolio-milestone-1.
+Test your Memory game is located on GitHub. The repository for this site can be found at VladimirB3/milestone-2-memory-game.
 The website was deployed using GitHub Pages, the link to the live version is: 
-https://vladimirb3.github.io/portfolio-milestone-1/
+https://vladimirb3.github.io/milestone-2-memory-game/
 
-Gitpod was used for development – to run the site locally python3 -m http.server command needs to be run on the terminal inside the repository VladimirB3/portfolio-milestone-1.
+Gitpod was used for development – to run the site locally python3 -m http.server command needs to be run on the terminal inside the repository VladimirB3/milestone-2-memory-game.
 
 # Credits
 
 ## Content
 
-•	For the Portfolio Page 4 websites have been used to showcase developers work – 
-noratecsoft.com, 
-sagatkft.com, 
-https://godofwar.playstation.com/, 
-purnavumuiza.lv.
+•	The Soviet Era posters where downloaded from https://gallerix.ru/storeroom/1973977528/
+
+•	The Soviet Era posters where issued before 1970s, therefore all of the copyright terms have expired. Additionally The Civil Code of the RSFSR of 1964 contained an additional free use provision in article 493 for personal OR educational purposes.
 
 •	Some code was copied from Bootstrap Documentation and modified.
+
+•	API was provided by https://openweathermap.org/ for free.
+
+•	jQuery was used to creat clean and easy to understand JavaScript.
 
 •	This README file was drafted up using MS Word following the giudelines provided by Code Institute.
 
 ## Media
 
-•	The photo used in the Home Page is from a personal collection.
+•	The Soviet Era posters where used in the game.
 
-•	The logo pictures of the company websites placed in thumbnail in Portfolio Page where cut out from their respective websites:
-noratecsoft.com, 
-sagatkft.com, 
-https://godofwar.playstation.com/, 
-purnavumuiza.lv.
+•	The weather indication icon is loaded directly from https://openweathermap.org/ from their library.
+
+•	The restart button icon was added from fontawesome.com library.
 
 
 ## Acknowledgements
 
-•	I received inspiration for this project from my Lovely Spouse.
+•	I received inspiration for this project from my Lovely Spouse and my soon to be born Son.
 
 
 
