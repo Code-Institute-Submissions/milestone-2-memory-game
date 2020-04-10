@@ -3,10 +3,6 @@ const cards = document.querySelectorAll(".card");
 let hasTurnedCard = false;
 let boardLock = false;
 let cardOne, cardTwo;
-let moves = 0;
-let counter = document.querySelector(".moves");
-let second = 0, minute = 0, hour = 0;
-let timer = document.querySelector(".timer");
 let restartButton = document.querySelector(".restart");
 
 
