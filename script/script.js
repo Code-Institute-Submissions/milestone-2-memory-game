@@ -80,3 +80,5 @@ const restartBoard = () => {
 })();
 
 cards.forEach(card => card.addEventListener("click", turnCard));
+
+restartButton.addEventListener("click", function(){location.reload(true)});
