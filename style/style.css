@@ -103,3 +103,26 @@ h1 {
 .front {
     transform: rotateY(180deg);
 }
+
+/* Weather API Styling */
+
+.weather-container {
+    background-color: #D7C49EFF;
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Julius Sans One', sans-serif;
+}
+
+.weather {
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 26px;
+    margin: 0;
+}
+
+.temp {
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 66px;
+    margin: 0;
+}

@@ -85,10 +85,18 @@ restartButton.addEventListener("click", function(){location.reload(true)});
 
 /* Weather Forecast API */
 
-$.getJSON("https://api.openweathermap.org/data/2.5/weather?q=Riga&APPID=5f18c160394ef7c42881dcd5a5a0c781", function(data) {
+$.getJSON("https://api.openweathermap.org/data/2.5/weather?q=Rīga,LV&units=metric&APPID=5f18c160394ef7c42881dcd5a5a0c781", 
+function(data) {
     console.log(data);
 
-    var icon = "http://openweathermap.org/img/w/" + data.weather[0].icon + ".png";
-    console.log(icon);
+    var icon = "https://openweathermap.org/img/w/" + data.weather[0].icon + ".png";
 
-});
+    var temp = Math.floor(data.main.temp);
+
+    var weather = data.weather[0].main;
+        
+    $(".icon").attr("src", icon);
+    $(".weather").append(weather);
+    $(".temp").append(temp);
+  }
+);
