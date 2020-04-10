@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style/style.css">
     <title>Test your Memory</title>
 </head>
@@ -13,9 +14,7 @@
     <h1>Test your Memory</h1>
         <section class="score">
             <span class="left-side">
-                <span class="moves">0</span> moves
-                <span class="timer"></span>
-            </span>
+                <span>Restart</span>
             <span class="right-side">
                 <span class="restart" onclick="restartButton()" id="reload">
                     <i class="fas fa-undo"></i>
@@ -84,6 +83,11 @@
                         <img class="back" src="assets/img/BACK.jpg" alt="Back Card">
                     </div>
                 </section>
+            </div>
+            <div class="weather-container">
+                <img class="icon">
+                <p class="weather"></p>
+                <p class="temp"></p>
             </div>
     <script src="script/script.js"></script>
 </body>

@@ -82,3 +82,13 @@ const restartBoard = () => {
 cards.forEach(card => card.addEventListener("click", turnCard));
 
 restartButton.addEventListener("click", function(){location.reload(true)});
+
+/* Weather Forecast API */
+
+$.getJSON("https://api.openweathermap.org/data/2.5/weather?q=Riga&APPID=5f18c160394ef7c42881dcd5a5a0c781", function(data) {
+    console.log(data);
+
+    var icon = "http://openweathermap.org/img/w/" + data.weather[0].icon + ".png";
+    console.log(icon);
+
+});
